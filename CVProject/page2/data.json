@@ -1,0 +1,80 @@
+{
+  "_id": "26567",
+  "email": "Jesitta",
+  "cv": {
+    "name": "jc",
+    "currentDesignation": "Trainee Software Engineer",
+    "workExperienceSummary": "Trainee",
+    "significantAchievements": [
+      "Design and Development of an e-commerce project (Doughy Delights)",
+      "Good understanding of technologies such as Maven, Bootstrap, Angular JS, Spring and Hibernate."
+    ],
+    "keySkills": {
+      "languages": [
+        "Java 1.8",
+        "Java Script",
+        "JSON",
+        "XML"
+      ],
+      "technologies": [
+        "Spring",
+        "JSP",
+        "HTML",
+        "Hibernate"
+      ],
+      "applicationServers": [
+        "Apache Tomcat"
+      ],
+      "softwareTools": [
+        "Eclipse",
+        "IntelliJ"
+      ],
+      "databaseTechnologies": [
+        "MySQL",
+        "H2",
+        "Oracle 10g"
+      ],
+      "buildTools": [
+        "Maven",
+        "git"
+      ],
+      "operatingSystems": [
+        "Windows 7",
+        "Linux"
+      ]
+    },
+    "keyStrengths": [
+      "Good understanding of Object oriented design analysis and agile methodologies.",
+      "Good understanding of technologies such as  Bootstrap, Angular JS, Spring and Hibernate."
+    ],
+    "qualifications": [
+      {
+        "degreeName": "Master of Technology",
+        "institute": "Motilal Nehru National Institute of Technology",
+        "specialization": "Computer Science",
+        "state": "Uttar Pradesh",
+        "country": "India"
+      }
+    ],
+    "careerBrief": [
+      {
+        "companyName": "Saggezza",
+        "designation": "Trainee Software Engineer",
+        "startDate": "1995-09-08",
+        "endDate": "1995-07-08",
+        "title": "DoughyDelights",
+        "description": " Doughy Delights  is a web-based project having multi-tier architecture with H2 as the backend database. User Interface is prepared in JSP. The business logic will reside in Java. The presentation layer will communicate with the business layer through Spring MVC Framework. ",
+        "clientName": "Oracle",
+        "technologies": [
+          "Java 1.8",
+          "Hibernate",
+          "Spring"
+        ],
+        "responsibilities": [
+          "Most of the development was in Java 1.8",
+          "Contribution towards data discovery, storage management, data transformation."
+        ]
+      }
+    ]
+  }
+}

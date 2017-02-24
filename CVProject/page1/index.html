@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CVview</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- Javascript -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+
+	<style>
+		.container{
+			height: 1024px;
+			width: 800px;
+		}
+		.sidebar{
+			background-color: #0F243E;
+			height: 800px;
+		}
+		.head{
+			font-family: Arial;
+			font-size: 37px;
+			font-weight: bold;
+			color: rgb(15,36,62);
+		}
+		.designation{
+			font-family: Arial;
+			font-size: 29px;
+			font-weight: bold;
+			color: rgb(166,166,166);
+		}
+		.keystrength{
+			font-family: Arial;
+			font-size: 16px;
+			font-weight: bold;
+			color: white;
+		}
+		.keystrengthpoints{
+			font-family: georgia;
+			font-size: 15px;
+			color: white;
+		}
+		.workexperience{
+			font-family: Arial;
+			font-size: 13px;
+			font-weight: bold;
+			color: #0F243E;
+		}
+		.workexperiencepoints{
+			font-family: Calibri;
+			font-size: 15px;
+			color: black;
+		}
+		.bulletlist{
+			font-family: Calibri;
+			font-size: 16px;
+			color: black;
+		}
+		.orangeline{
+			display: block;
+			border: 0;
+			border-top: 1px solid orange;
+			margin: 1em 0;
+			padding: 0; 
+		}
+		.achieved{
+			font-family: georgia;
+			font-size: 19px;
+			font-style: italic;
+			color: grey;
+			text-align: center;
+		}
+		.content{
+			padding-top: 20px;
+		}
+		.firstline{
+			margin-top: 50px;
+		}
+
+		@media print {
+			.sidebar{
+				background-color: #0F243E !important;
+			}
+			.head{
+				color: rgb(15,36,62) !important;
+			}
+			.designation{
+				color: rgb(166,166,166) !important;
+			}
+			.keystrength,.keystrengthpoints{
+				color: white !important;
+			}
+			.workexperience{
+				color: #0F243E !important;
+			}
+			.workexperiencepoints,.bulletlist{
+				color: black !important;
+			}
+			.achieved{
+				color: grey !important;
+			}
+		}
+	}
+</style>
+</head>
+<body ng-app="myapp">
+	<div class="container" ng-controller="viewcontroller">
+		<div class="content">
+			<!-- Header section -->
+			<div class="row">
+				<!-- Header contant Division -->
+				<div class="col-xs-8">
+					<h1 class="head">{{employee.cv.name}}</h1>
+					<h1 class="designation">{{employee.cv.currentDesignation}}</h1>
+				</div>
+				<!-- Image division -->
+				<div class="col-xs-4">
+					<img src="saggezza.jpg" style="width: 200px;">
+				</div>
+			</div>
+			<!-- Header section ends here -->
+			<div class="row">
+				<!-- Side bar starts here -->
+				<div class="col-xs-3 sidebar">
+					<div>
+						<h4 class="keystrength">KEY STRENGTH</h4>
+						<h4 class="keystrengthpoints" ng-repeat="keystrength in employee.cv.keyStrengths">{{keystrength}}</h4>
+					</div>	
+				</div>
+				<!-- Side bar ends here -->
+				<!-- Main Bar starts here-->
+				<div class="col-xs-9">
+					<!-- Work Experience starts here -->
+					<h1 class="workexperience">WORK EXPERIENCE
+					</h1>
+					<h1 class="workexperiencepoints">Joined Saggezza India Private Limited on Jan 2,2017.
+					</h1>
+					<!-- Work experience ends here -->
+					<!-- Significants starts here -->
+					<div>
+						<h1 class="workexperience">SIGNIFICANT ACHIEVEMENT</h1>
+						<ul ng-repeat="achievments in employee.cv.significantAchievements">
+							<li class="workexperiencepoints">{{achievments}}
+							</li>
+						</ul>
+					</div>
+					<!-- Significant ends here -->
+					<!-- KEYSKILLS starts here -->
+					<div>
+						<h1 class="workexperience">KEY SKILLS-TECHNOLOGY</h1>
+						<ul ng-repeat="(key, value) in employee.cv.keySkills">
+							<li class="workexperiencepoints">{{key}}:
+								<span ng-repeat="skills in value">{{skills}},</span>
+							</li>
+						</ul>
+					</div>
+					<!-- KEYSKILLS ends here -->
+					<!-- Education  starts here -->
+					<div>
+						<h1 class="workexperience">EDUCATION & CERTIFICATION</h1>
+						<ul ng-repeat="empqualification in employee.cv.qualifications">
+							<li class="workexperiencepoints">{{empqualification.degreeName}},
+								{{empqualification.specialization}} from {{empqualification.institute}},{{empqualification.state}},{{empqualification.country}}
+							</li>
+						</ul>
+					</div>
+					<!-- Education ends here -->
+					<hr class="orangeline firstline">
+					<h1 class="achieved">Bravo award for significant contribution to Big data Product
+					</h1>
+					<hr class="orangeline">
+				</div>
+				<!-- Main Bar Ends Here -->
+			</div>
+			<!-- Main Row Ends Here -->
+		</div>
+	</div>
+	<!-- Container Ends Here -->
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
